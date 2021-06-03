@@ -35,8 +35,8 @@ bot.on('message', (msg) => {
 		s = msg.text.split("|");
 		model.predict(
 			[
-			parseFloat(s[0]),
-			parseFloat(s[1])
+				parseFloat(s[0]),
+				parseFloat(s[1])
 			]
 		).then((jres1)=>{
 			console.log(jres1);
@@ -54,9 +54,14 @@ bot.on('message', (msg) => {
 					msg.chat.id,
 					`klasifikasi Tegangan ${jres2}`
 				);
+				state = 0;
 			})
 		})
 	}else{
+		bot.sendMessage(
+		msg.chat.id,
+			`Please Click /start`
+		);
 		state = 0;
 	}
 })
