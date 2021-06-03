@@ -45,7 +45,7 @@ bot.on('message', (msg) => {
 				bot.sendMessage(
 					msg.chat.id,
 					`nilai v yang diprediksi adalah  ${jres1[0]} volt`
-				);
+				);										
 				bot.sendMessage(
 					msg.chat.id,
 					`nilai p yang diprediksi adalah  ${jres1[1]} watt`
