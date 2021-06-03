@@ -27,7 +27,7 @@ async function classify(data){
 	data = normalized(data);
 	shape = [1, in_dim];
 	
-	tf_data = tf.sensor2d(data,shape);
+	tf_data = tf.tensor2d(data,shape);
 	
 	try{
 		// path load in public acess 
