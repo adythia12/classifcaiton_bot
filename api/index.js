@@ -7,7 +7,7 @@ const cls_model = require('./sdk/cls_model.js');
 
 // Bot Setting
 const TelegramBot = require('node-telegram-bot-api');
-const token = '1871909542:AAE6OTSe6nt1hzvzZFZGxL5GC-vOzzUlUNU'
+const token = '1733547356:AAEOX7oG_z09vS34M-DUHOm5YCPsXYDXohg'
 const bot = new TelegramBot(token, {polling: true});
 
 state =0;
@@ -56,7 +56,7 @@ bot.on('message', (msg) => {
 				);
 				state = 0;
 			})
-		
+		}))
 	}else{
 		bot.sendMessage(
 		msg.chat.id,
@@ -64,7 +64,7 @@ bot.on('message', (msg) => {
 		);
 		state = 0;
 	}
-})
+}
 
 // routers
 r.get('/predict/:i/:r', function(req, res, next) {    
