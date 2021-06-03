@@ -19,7 +19,6 @@ function ArgMax(res){
 			label = "DROP VOLTAGE"
 		}
 		return label
-]
 
 async function classify(data){
 	let in_dim = 4; 
