@@ -56,7 +56,7 @@ bot.on('message', (msg) => {
 				);
 				state = 0;
 			})
-		})
+		
 	}else{
 		bot.sendMessage(
 		msg.chat.id,
