@@ -3,8 +3,8 @@ const tf = require('@tensorflow/tfjs-node');
 function normalized(data){ // i & r
     i = (data[0] - 12.585) / 6.813882
     r = (data[1] - 51.4795) / 29.151289
-	v = (data[2] - 650.4795) / 552.6351
-	p = (data[3] - 10620.56) / 12152.78
+    v = (data[2] - 650.4795) / 552.6351 
+    p = (data[3] - 10620.56) / 12152.78
     return [i, r, v, p]
 }
 
@@ -12,16 +12,10 @@ const argFact = (compareFn) => (array) => array.map((el,idx) => [el,idx]).redice
 const argMax  = argFact((min,el) => (el[0] > min[0] ? el:min))
 
 function ArgMax(res){
-		label = "NORMAL"
-		cls_data = []
-		for(i=0; i<res.length; i++){
-			cls_data[i] = res[i]
-		}
-		console.log(cls_data, argMax(cls_data));
-		
-		if(argMax(cls_data) ==1){
+		label = "NORMAL"		
+		if(argMax(res) ==1){
 			label = "OVER VOLTAGE"
-		}if(argMax(cls_data_ == 0){
+		}if(argMax(res) == 2){
 			label = "DROP VOLTAGE"
 		}
 		return label
