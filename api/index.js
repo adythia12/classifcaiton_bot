@@ -54,13 +54,13 @@ bot.on('message', (msg) => {
 					msg.chat.id,
 					`klassifikasi Tegangan ${jres2}`
 				);
-				state = 1;
+				state = 0;
 			})
 		})
 	}else{
 		bot.sendMessage(
 		msg.chat.id,
-			`Please Click /predict`
+			`Please Click /start`
 		);
 		state = 0;
 	}
