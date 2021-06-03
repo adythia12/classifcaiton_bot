@@ -8,7 +8,7 @@ function normalized(data){ // i & r
     return [i, r, v, p]
 }
 
-const argFact = (compareFn) => (array) => array.map((el,idx) => [el,idx]).redice(compareFn)[1]
+const argFact = (compareFn) => (array) => array.map((el,idx) => [el,idx]).reduce(compareFn)[1]
 const argMax  = argFact((min,el) => (el[0] > min[0] ? el:min))
 
 function ArgMax(res){
@@ -19,6 +19,7 @@ function ArgMax(res){
 			label = "DROP VOLTAGE"
 		}
 		return label
+}
 
 async function classify(data){
 	let in_dim = 4; 
