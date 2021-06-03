@@ -59,7 +59,7 @@ bot.on('message', (msg) => {
 					`klasifikasi Tegangan ${jres2}`
 				);
 			})
-		}))
+		})
 	}else{
 		state = 0;
 	}
